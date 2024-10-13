@@ -1,8 +1,6 @@
 {
   "dependencies": {
     "@prisma/client": "^5.20.0",
-    "@supabase/supabase-js": "^2.45.4",
-    "@vercel/node": "^3.2.23",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
@@ -18,11 +16,11 @@
   },
   "name": "server",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "prisma generate && tsc",
-    "start": "node dist/index.js "
+    "start": "node dist/index.js"
   },
   "author": "Wahyu Rifia",
   "license": "ISC",
