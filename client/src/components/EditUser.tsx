@@ -15,7 +15,9 @@ const EditUser: React.FC = () => {
   }, []);
 
   const getUserById = async () => {
-    const response = await axios.get(`http://localhost:2000/users/${id}`);
+    const response = await axios.get(
+      `https://server-api-lilac.vercel.app/users/${id}`
+    );
     setName(response.data.user.name);
     setEmail(response.data.user.email);
     setGender(response.data.user.gender);
@@ -24,7 +26,7 @@ const EditUser: React.FC = () => {
   const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:2000/users/${id}`, {
+      await axios.put(`https://server-api-lilac.vercel.app/users/${id}`, {
         id,
         name,
         email,

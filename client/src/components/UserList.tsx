@@ -34,7 +34,9 @@ const UserList: React.FC = () => {
     getUsers();
   }, []);
   const getUsers = async () => {
-    const response = await axios.get("http://localhost:2000/users");
+    const response = await axios.get(
+      "https://server-api-lilac.vercel.app/users"
+    );
     console.log(response.data.users);
 
     setUser(response.data.users);
@@ -42,7 +44,7 @@ const UserList: React.FC = () => {
 
   const deleteUser = async (id: number) => {
     try {
-      await axios.patch(`http://localhost:2000/users/${id}`);
+      await axios.patch(`https://server-api-lilac.vercel.app/users/${id}`);
       getUsers();
       setIsModalOpen(false);
     } catch (error: any) {

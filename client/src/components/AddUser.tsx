@@ -12,7 +12,11 @@ const AddUser: React.FC = () => {
   const saveUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:2000/users", { name, email, gender });
+      await axios.post("https://server-api-lilac.vercel.app/users", {
+        name,
+        email,
+        gender,
+      });
       navigate("/");
     } catch (error: any) {
       console.log(error.message);
