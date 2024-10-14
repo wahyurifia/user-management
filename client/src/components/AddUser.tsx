@@ -8,11 +8,11 @@ const AddUser: React.FC = () => {
   const [gender, setGender] = useState<string>("Pria");
 
   const navigate = useNavigate();
-
+  const API = process.env.API_URL!;
   const saveUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post("https://server-api-lilac.vercel.app/users", {
+      await axios.post(`${API}`, {
         name,
         email,
         gender,

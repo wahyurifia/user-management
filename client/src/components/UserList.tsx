@@ -19,6 +19,7 @@ const UserList: React.FC = () => {
   const [users, setUser] = useState<User[]>([]);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const API = process.env.API_URL!;
 
   const handleUserClick = (user: User) => {
     setSelectedUser(user);
@@ -34,9 +35,7 @@ const UserList: React.FC = () => {
     getUsers();
   }, []);
   const getUsers = async () => {
-    const response = await axios.get(
-      "https://server-api-lilac.vercel.app/users"
-    );
+    const response = await axios.get(`${API}`);
     console.log(response.data.users);
 
     setUser(response.data.users);
@@ -44,7 +43,7 @@ const UserList: React.FC = () => {
 
   const deleteUser = async (id: number) => {
     try {
-      await axios.patch(`https://server-api-lilac.vercel.app/users/${id}`);
+      await axios.patch(`${API}/${id}`);
       getUsers();
       setIsModalOpen(false);
     } catch (error: any) {
