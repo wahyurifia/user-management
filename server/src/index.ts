@@ -4,15 +4,14 @@ import dotenv from "dotenv";
 import router from "./user/user.controller";
 
 dotenv.config();
-const PORT = process.env.PORT || 2100;
-
 const app: Application = express();
 app.use(cors());
 app.use(express.json());
+const PORT = process.env.PORT || 2150;
 
 app.use("/users", router);
 
-app.get("/", async (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     message: "Welcome to my server api",
   });
