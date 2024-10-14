@@ -7,7 +7,7 @@ import {
   permanentlyDeleted,
   updateUser,
 } from "./user.services";
-export const router: Router = Router();
+const router: Router = Router();
 
 router.post("/", async (req: Request, res: Response) => {
   const { name, email, gender } = req.body;
@@ -100,3 +100,5 @@ router.delete("/:id", async (req: Request, res: Response) => {
     res.send(error.message);
   }
 });
+
+export default router;
