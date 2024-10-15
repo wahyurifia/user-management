@@ -9,14 +9,15 @@ const EditUser: React.FC = () => {
 
   const navigate = useNavigate();
   const { id } = useParams<string>();
-  const API = process.env.API_URL!;
 
   useEffect(() => {
     getUserById();
   }, []);
 
   const getUserById = async () => {
-    const response = await axios.get(`${API}/${id}`);
+    const response = await axios.get(
+      `https://server-api-lilac.vercel.app/users/${id}`
+    );
     setName(response.data.user.name);
     setEmail(response.data.user.email);
     setGender(response.data.user.gender);
@@ -25,7 +26,7 @@ const EditUser: React.FC = () => {
   const updateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.put(`${API}/${id}`, {
+      await axios.put(`https://server-api-lilac.vercel.app/users/${id}`, {
         id,
         name,
         email,
