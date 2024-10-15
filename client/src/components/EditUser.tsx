@@ -12,7 +12,7 @@ const EditUser: React.FC = () => {
 
   useEffect(() => {
     getUserById();
-  });
+  }, []);
 
   const getUserById = async () => {
     const response = await axios.get(
