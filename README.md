@@ -3,8 +3,9 @@
 Proyek ini adalah aplikasi fullstack dengan **React.js** untuk frontend dan **TypeScript** serta **Express.js** untuk backend. Backend menggunakan **PostgreSQL** sebagai database, diakses melalui **Prisma ORM**.
 .
 
-![Demo](https://usermanagement-chi.vercel.app/) 
+[![Demo](https://github.com/wahyurifia/user-management/blob/main/client/src/components/demo.png?raw=true)](https://usermanagement-chi.vercel.app/)
 
+Link Preview : https://usermanagement-chi.vercel.app/
 ## ✨ Fitur Utama
 - ✅ Fitur 1: Fitur Get all user
 - ✅ Fitur 2: Fitur untuk menambah dan mengedit
@@ -56,8 +57,44 @@ Aplikasi Backend berjalan di http://localhost:2150.
 
 ## 📚 Struktur Folder
 
-Struktur folder proyek ini terdiri dari **frontend** dan **backend** dengan pembagian sebagai berikut:
+Struktur folder proyek ini terdiri dari **client** dan **server** dengan pembagian sebagai berikut:
 
-fullstack-app/ ├── frontend/ # Frontend menggunakan React.js │ ├── src/ # Folder utama untuk source code │ │ ├── components/ # Komponen UI yang dapat digunakan kembali │ │ ├── pages/ # Halaman utama aplikasi │ │ ├── services/ # Modul untuk permintaan HTTP menggunakan Axios │ │ ├── App.tsx # Komponen utama React │ │ └── index.tsx # File utama untuk render aplikasi │ ├── public/ # Folder untuk aset publik (favicon, gambar, dll.) │ └── vite.config.ts # Konfigurasi untuk Vite ├── backend/ # Backend menggunakan Express.js dan TypeScript │ ├── src/ # Folder utama untuk source code backend │ │ ├── controllers/ # Logika utama untuk menangani request │ │ ├── prisma/ # Prisma Client dan skema database │ │ ├── routes/ # Definisi rute API │ │ ├── services/ # Fungsi untuk interaksi dengan database │ │ ├── app.ts # Konfigurasi utama aplikasi │ │ └── server.ts # Entry point untuk menjalankan server │ ├── prisma/ # Folder untuk skema Prisma │ │ └── schema.prisma # Definisi skema database │ ├── tsconfig.json # Konfigurasi TypeScript │ └── package.json # Dependensi backend └── README.md # Dokumentasi proyek
+<p class="has-line-data" data-line-start="0" data-line-end="19">📦client<br>
+┣ 📂public<br>
+┃ ┗ 📜index.html<br>
+┣ 📂src<br>
+┃ ┣ 📂components<br>
+┃ ┃ ┣ 📂modal<br>
+┃ ┃ ┃ ┗ 📜index.tsx<br>
+┃ ┃ ┣ 📜AddUser.tsx<br>
+┃ ┃ ┣ 📜EditUser.tsx<br>
+┃ ┃ ┗ 📜UserList.tsx<br>
+┃ ┣ 📜App.tsx<br>
+┃ ┗ 📜index.tsx<br>
+┣ 📜.gitignore<br>
+┣ 📜package-lock.json<br>
+┣ 📜package.json<br>
+┣ 📜postcss.config.js<br>
+┣ <a href="http://xn--README-o754e.md">📜README.md</a><br>
+┣ 📜tailwind.config.js<br>
+┗ 📜tsconfig.json</p>
 
+<p class="has-line-data" data-line-start="0" data-line-end="18">📦server<br>
+┣ 📂prisma<br>
+┃ ┣ 📂migrations<br>
+┃ ┃ ┣ 📂20241014133657_setup_supabase<br>
+┃ ┃ ┃ ┗ 📜migration.sql<br>
+┃ ┃ ┗ 📜migration_lock.toml<br>
+┃ ┗ 📜schema.prisma<br>
+┣ 📂src<br>
+┃ ┣ 📂user<br>
+┃ ┃ ┣ 📜user.controller.ts<br>
+┃ ┃ ┣ 📜user.repository.ts<br>
+┃ ┃ ┗ 📜user.services.ts<br>
+┃ ┗ 📜index.ts<br>
+┣ 📜.gitignore<br>
+┣ 📜package-lock.json<br>
+┣ 📜package.json<br>
+┣ 📜tsconfig.json<br>
+┗ 📜vercel.json</p>
 
