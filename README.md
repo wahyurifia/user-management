@@ -5,7 +5,14 @@ Proyek ini adalah aplikasi fullstack dengan **React.js** untuk frontend dan **Ty
 
 [![Demo](https://github.com/wahyurifia/user-management/blob/main/client/src/components/demo.png?raw=true)](https://usermanagement-chi.vercel.app/)
 
-Link Preview : https://usermanagement-chi.vercel.app/
+## Demo
+
+Check out the live demo of the project:
+
+[Live Demo](https://usermanagement-chi.vercel.app/)
+
+---
+
 ## ✨ Fitur Utama
 - ✅ Fitur 1: Fitur Get all user
 - ✅ Fitur 2: Fitur untuk menambah dan mengedit
